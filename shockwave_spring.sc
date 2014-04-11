@@ -40,7 +40,7 @@ SynthDef("spring", { | springfac = 15000, damp = 0.0008 amp = 0.5|
 	f = Pulse.ar(0.5)*EnvGen.kr(env);
 	s = Spring.ar(f, springfac, damp);
 	DetectSilence.ar(s, doneAction:2);
-	Out.ar([0,1],amp*s)}).play;
+	Out.ar([0,1],amp*s)}).writeDefFile("/Applications/SuperCollider/SuperCollider.app/Contents/Resources/synthdefs/");
 )
 
 // OSC message to send: "/s_new", "spring", -1 (SynthID), 0 (Action), 0 (TargetID),
