@@ -28,6 +28,9 @@ s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 600, \sustain, 0.1, \pan, 0.75);
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 100, \sustain, 0.1, \pan, 1.0);
 )
 
+
+// to do: experiment with a panning and serveral channels
+
 // very CPU efficient synthdef from p. 471, Supercollider Book, Chapter Microsound Alberto de Campo
 
 
