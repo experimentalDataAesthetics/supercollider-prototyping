@@ -19,13 +19,30 @@ SynthDef("grain", { |out, amp=0.1, freq=440, sustain=0.01, pan|
 )
 
 (
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 8000, \sustain, 0.1, \pan, -1.0); // even more efficient, as no Synth object is created.
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1200, \sustain, 0.1, \pan, 1.0);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1400, \sustain, 0.1, \pan, -0.75);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 12800, \sustain, 0.1, \pan, -0.5);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 2200, \sustain, 0.1, \pan, 0.5);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 600, \sustain, 0.1, \pan, 0.75);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 100, \sustain, 0.1, \pan, 1.0);
+
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 200, \sustain, 0.1, \pan, -1.0); // even more efficient, as no Synth object is created.
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1200, \sustain, 0.1, \pan, 1.0);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1400, \sustain, 0.1, \pan, -0.75);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1800, \sustain, 0.1, \pan, -0.5);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 12200, \sustain, 0.1, \pan, 0.5);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 600, \sustain, 0.1, \pan, 0.75);
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 100, \sustain, 0.1, \pan, 1.0);
+
+s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 240, \sustain, 0.1, \pan, -1.0); // even more efficient, as no Synth object is created.
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1200, \sustain, 0.1, \pan, 1.0);
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1400, \sustain, 0.1, \pan, -0.75);
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 1800, \sustain, 0.1, \pan, -0.5);
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 2200, \sustain, 0.1, \pan, 0.5);
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 600, \sustain, 0.1, \pan, 0.75);
 s.sendMsg("s_new", \grain, -1, 0, 1, \freq, 100, \sustain, 0.1, \pan, 1.0);
+
 )
 
 
