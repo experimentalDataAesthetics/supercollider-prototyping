@@ -9,11 +9,16 @@ Pbindef(\grainplayer,
 
 // change pattern
 Pbindef(\grainplayer, \dur, Pn(Prand(#[0.1, 1.0, 4, 2, 0.5, 3], inf)));
-Pbindef(\grainplayer, \dur, 0.4);
+Pbindef(\grainplayer, \dur, Pn(Prand(#[0.1, .4, 0.3, 2, 0.5, 0.3], inf)));
+
+
+Pbindef(\grainplayer, \dur, 0.5);
 
 
 // panning
 Pbindef(\grainplayer, \pan, Pn(Pseq([-1.0, 1.0])));
+Pbindef(\grainplayer, \pan, Pn(Pseq([-1.0, 1.0, 0.0, 0.5, -0.5])));
+
 Pbindef(\grainplayer, \pan, 0);
 
 // change grain durations
@@ -31,15 +36,15 @@ Pbindef(\grainplayer, \sustain, 0.001);
 Pbindef(\grainplayer, \sustain, Pn(Pgeom(0.1, 0.9, 60)));
 Pbindef(\grainplayer, \sustain, Pfunc({ exprand(0.0003, 0.03) }));
 Pbindef(\grainplayer, \sustain, 0.03);
-Pbindef(\grainplayer, \sustain, Pn(Pshuf([0.05, 0.01, 0.1, 0.03])));
+Pbindef(\grainplayer, \sustain, Pn(Pshuf([0.05, 0.01, 0.07, 0.03, 0.01])));
 
 
 // change grain waveform (sine) frequency
-Pbindef(\grainplayer, \freq, 300);
+Pbindef(\grainplayer, \freq, 50);
 Pbindef(\grainplayer, \freq, 1000);
 Pbindef(\grainplayer, \freq, 3000);
 Pbindef(\grainplayer, \freq, Pn(Pgeom(300, 1.125, 32)));
-Pbindef(\grainplayer, \freq, Pfunc({ exprand(300, 3000) }));
+Pbindef(\grainplayer, \freq, Pfunc({ exprand(30, 3000) }));
 Pbindef(\grainplayer, \freq, 1000);
 	// fixed order
 Pbindef(\grainplayer, \freq, Pn(Pseq([1000, 600, 350, 250].scramble)));
@@ -51,12 +56,17 @@ Pbindef(\grainplayer, \freq, Pn(Pshuf([10000, 100, 350, 250, 2000])));
 Pbindef(\grainplayer, \freq, [300, 1400, 100, 1000, 40, 10, 444, 22, 44, 5555, 400]);
 Pbindef(\grainplayer, \freq, [300, 400, 100, 600, 40, 10, 10144, 22, 44, 5555, 400]);
 
+
+
+Pbindef(\grainplayer, \freq, [300, 1400], \amp, 0.02);
+
+
 // Testing with random datapoints
 (
 var dimensions, vol;
-dimensions = 700;
+dimensions = 25;
 vol = 1.0 / dimensions;
-Pbindef(\grainplayer, \freq, Array.fill(dimensions,{22500.16.rand}),\amp, vol);
+Pbindef(\grainplayer, \freq, Array.fill(dimensions,{11500.16.rand}),\amp, vol);
 )
 
 /*
