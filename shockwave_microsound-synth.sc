@@ -1,5 +1,6 @@
 s.boot;
 s.scope(2);
+
 (
 SynthDef("grain", { |out, amp=0.1, freq=440, sustain=0.01, pan|
 	var snd = FSinOsc.ar(freq);
