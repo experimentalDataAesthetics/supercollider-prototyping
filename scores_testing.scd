@@ -2,8 +2,8 @@
 
 (
 Pbindef(\grainplayer,
-	\instrument, \grain, \freq, 500,
-	\sustain, 0.03, \pan, 0.0, \dur, 0.5, \amp, 0.1,
+	\instrument, \grain3, \freq, 500,
+	\sustain, 0.03, \pan, 0.0, \dur, 0.5, \amp, 0.8,
 ).play;
 )
 
@@ -12,7 +12,7 @@ Pbindef(\grainplayer, \dur, Pn(Prand(#[0.1, 1.0, 4, 2, 0.5, 3], inf)));
 Pbindef(\grainplayer, \dur, Pn(Prand(#[0.1, .4, 0.3, 2, 0.5, 0.3], inf)));
 
 
-Pbindef(\grainplayer, \dur, 0.5);
+Pbindef(\grainplayer, \dur, 0.1);
 
 
 // panning
